@@ -54,10 +54,6 @@
       margin: 0 auto;
     }
 
-    /* --------------------------------
-       HERO
-    -------------------------------- */
-
     .hero {
       text-align: center;
       margin-bottom: 22px;
@@ -73,11 +69,9 @@
 
     h1 {
       margin: 0;
-
       font-family: cursive;
       font-size: clamp(2.2rem, 9vw, 4.2rem);
       font-weight: 600;
-
       color: var(--cream);
 
       text-shadow:
@@ -88,7 +82,6 @@
     .subtitle {
       max-width: 560px;
       margin: 12px auto 0;
-
       color: var(--lilac);
       font-size: 1rem;
       font-style: italic;
@@ -98,7 +91,6 @@
     .divider {
       margin: 24px auto;
       text-align: center;
-
       color: var(--gold);
       font-size: 0.78rem;
       letter-spacing: 0.08em;
@@ -107,13 +99,8 @@
         0 0 7px rgba(179, 138, 88, 0.35);
     }
 
-    /* --------------------------------
-       CARDS
-    -------------------------------- */
-
     .card {
       position: relative;
-
       margin-top: 22px;
       padding: 24px 20px;
 
@@ -134,7 +121,6 @@
 
     .card-title {
       margin: 0 0 8px;
-
       color: var(--cream);
       font-size: 1.25rem;
       letter-spacing: 0.05em;
@@ -143,7 +129,6 @@
 
     .card-copy {
       margin: 0;
-
       color: var(--lilac);
       font-size: 0.95rem;
       line-height: 1.7;
@@ -162,10 +147,6 @@
       line-height: 1.65;
     }
 
-    /* --------------------------------
-       ARI
-    -------------------------------- */
-
     .ari-zone {
       position: relative;
       margin-top: 75px;
@@ -173,15 +154,11 @@
 
     .ari {
       position: absolute;
-
       width: 108px;
       height: auto;
-
       right: 18px;
       top: -86px;
-
       z-index: 5;
-
       pointer-events: none;
 
       filter:
@@ -204,7 +181,6 @@
 
     .ari-bubble {
       position: absolute;
-
       top: -62px;
       left: 16px;
 
@@ -240,9 +216,7 @@
 
     .ari-bubble::after {
       content: "";
-
       position: absolute;
-
       right: -9px;
       bottom: 12px;
 
@@ -263,17 +237,12 @@
       font-weight: 600;
     }
 
-    /* --------------------------------
-       FORM
-    -------------------------------- */
-
     .form-section {
       margin-top: 22px;
     }
 
     .section-heading {
       margin: 0 0 15px;
-
       color: var(--cream);
       font-size: 1.15rem;
       letter-spacing: 0.06em;
@@ -281,7 +250,6 @@
 
     .section-intro {
       margin: -6px 0 16px;
-
       color: var(--lilac);
       font-size: 0.82rem;
       font-style: italic;
@@ -295,7 +263,6 @@
     label {
       display: block;
       margin-bottom: 8px;
-
       color: var(--cream);
       font-size: 0.92rem;
       font-weight: 600;
@@ -312,7 +279,6 @@
     .hint {
       display: block;
       margin-top: 7px;
-
       color: var(--rose);
       font-size: 0.78rem;
       font-style: italic;
@@ -364,15 +330,10 @@
       line-height: 1.55;
     }
 
-    /* --------------------------------
-       PRETTY CHOICE BUTTONS
-    -------------------------------- */
-
     .choice-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 9px;
-
       margin-top: 8px;
     }
 
@@ -385,7 +346,6 @@
     .choice span {
       display: block;
       height: 100%;
-
       padding: 11px 8px;
 
       background: rgba(23, 18, 29, 0.72);
@@ -433,10 +393,6 @@
 
       transform: translateY(-1px);
     }
-
-    /* --------------------------------
-       BUTTON
-    -------------------------------- */
 
     .button-wrap {
       margin-top: 28px;
@@ -505,16 +461,10 @@
       }
     }
 
-    /* --------------------------------
-       SUCCESS SCREEN
-    -------------------------------- */
-
     #success-card {
       display: none;
-
       text-align: center;
       overflow: hidden;
-
       padding-top: 28px;
       padding-bottom: 28px;
     }
@@ -558,17 +508,14 @@
     .success-copy {
       max-width: 520px;
       margin: 0 auto;
-
       color: var(--lilac);
       line-height: 1.7;
     }
 
     .success-ari {
       display: block;
-
       width: 125px;
       height: auto;
-
       margin: 20px auto 3px;
 
       filter:
@@ -580,40 +527,26 @@
 
     .ari-verdict {
       margin: 7px auto 20px;
-
       color: var(--gold);
       font-size: 0.83rem;
       font-style: italic;
     }
 
-    /* --------------------------------
-       FOOTER
-    -------------------------------- */
-
     .footer {
       margin-top: 28px;
       text-align: center;
-
       color: var(--gold);
       font-size: 0.8rem;
       font-style: italic;
       line-height: 1.6;
     }
 
-    /* --------------------------------
-       LITTLE BACKGROUND SPARKLES
-    -------------------------------- */
-
     .sparkle {
       position: fixed;
-
       color: rgba(183, 138, 203, 0.23);
-
       pointer-events: none;
       user-select: none;
-
       z-index: -1;
-
       animation: sparkleFloat 7s ease-in-out infinite;
     }
 
@@ -650,10 +583,6 @@
       }
     }
 
-    /* --------------------------------
-       MOBILE
-    -------------------------------- */
-
     @media (max-width: 480px) {
       .ari-zone {
         margin-top: 82px;
@@ -668,11 +597,8 @@
       .ari-bubble {
         left: 8px;
         top: -64px;
-
         width: calc(100% - 116px);
-
         padding: 9px 10px;
-
         font-size: 0.72rem;
       }
 
@@ -737,9 +663,6 @@
 
     </section>
 
-
-    <!-- ARI + INTRO -->
-
     <section class="ari-zone">
 
       <div class="ari-bubble">
@@ -776,15 +699,10 @@
 
     </section>
 
-
-    <!-- FORM -->
-
     <form
       id="request-form"
       class="card form-section"
     >
-
-      <!-- ABOUT -->
 
       <h2 class="section-heading">
         ✦ About You
@@ -806,13 +724,9 @@
 
       </div>
 
-
       <div class="divider">
         ✦ ───── ◇ ───── ✦
       </div>
-
-
-      <!-- IDEA -->
 
       <h2 class="section-heading">
         ☾ The Idea
@@ -841,7 +755,6 @@
         </span>
 
       </div>
-
 
       <div class="field">
 
@@ -910,7 +823,6 @@
 
       </div>
 
-
       <div class="field">
 
         <label for="role">
@@ -927,13 +839,111 @@
 
       </div>
 
+      <div class="field">
+
+        <label>
+          Starting relationship
+          <span class="optional">— pick one</span>
+        </label>
+
+        <div class="choice-grid">
+
+          <label class="choice">
+            <input
+              type="radio"
+              name="relationship-stage"
+              value="Non-established"
+            >
+            <span>✦ Non-established</span>
+          </label>
+
+          <label class="choice">
+            <input
+              type="radio"
+              name="relationship-stage"
+              value="Semi-established"
+            >
+            <span>☾ Semi-established</span>
+          </label>
+
+          <label class="choice">
+            <input
+              type="radio"
+              name="relationship-stage"
+              value="Established"
+            >
+            <span>♡ Established</span>
+          </label>
+
+        </div>
+
+        <span class="hint">
+          Strangers, acquainted, or already have history together.
+        </span>
+
+      </div>
+
+      <div class="field">
+
+        <label for="history">
+          Existing relationship / history
+          <span class="optional">— optional</span>
+        </label>
+
+        <textarea
+          id="history"
+          name="relationship-history"
+          placeholder="Childhood friends, siblings, rivals, coworkers, arranged fiancé, barely tolerate each other..."
+        ></textarea>
+
+      </div>
+
+      <div class="field">
+
+        <label>
+          How specific is your idea?
+        </label>
+
+        <div class="choice-grid">
+
+          <label class="choice">
+            <input
+              type="radio"
+              name="idea-specificity"
+              value="Loose idea"
+            >
+            <span>✧ Loose idea</span>
+          </label>
+
+          <label class="choice">
+            <input
+              type="radio"
+              name="idea-specificity"
+              value="Some specifics"
+            >
+            <span>☾ Some specifics</span>
+          </label>
+
+          <label class="choice">
+            <input
+              type="radio"
+              name="idea-specificity"
+              value="Very specific"
+            >
+            <span>✦ Very specific</span>
+          </label>
+
+        </div>
+
+        <span class="hint">
+          This just tells me how much freedom you want me to take with the idea.
+        </span>
+
+      </div>
 
       <div class="divider">
         ✦ ───── ◇ ───── ✦
       </div>
-
-
-      <!-- VIBE -->
 
       <h2 class="section-heading">
         ♡ The Vibe
@@ -990,7 +1000,6 @@
 
       </div>
 
-
       <div class="field">
 
         <label>
@@ -1030,7 +1039,6 @@
 
       </div>
 
-
       <div class="field">
 
         <label for="tropes">
@@ -1046,13 +1054,9 @@
 
       </div>
 
-
       <div class="divider">
         ✦ ───── ◇ ───── ✦
       </div>
-
-
-      <!-- NON NEGOTIABLES -->
 
       <h2 class="section-heading">
         ✧ Ingredients
@@ -1073,7 +1077,6 @@
 
       </div>
 
-
       <div class="field">
 
         <label for="nope">
@@ -1088,7 +1091,6 @@
         ></textarea>
 
       </div>
-
 
       <div class="field">
 
@@ -1105,6 +1107,21 @@
 
       </div>
 
+      <div class="field">
+
+        <label class="choice">
+          <input
+            type="checkbox"
+            name="creative-freedom"
+            value="Yes"
+          >
+          <span>
+            🔮 I’m happy for you to change names, details or lore
+            to better fit your style.
+          </span>
+        </label>
+
+      </div>
 
       <div class="button-wrap">
 
@@ -1118,9 +1135,6 @@
       </div>
 
     </form>
-
-
-    <!-- SUCCESS SCREEN -->
 
     <section
       id="success-card"
@@ -1167,39 +1181,24 @@
 
     </section>
 
-
     <div class="footer">
       ☾ Made with too much lore and not enough restraint ☽
     </div>
 
   </main>
 
-
   <script>
-
-    /* --------------------------------
-       RANDOM ARI GREETINGS
-    -------------------------------- */
 
     const ariMessages = [
       "Please feed the cauldron responsibly.",
-
       "Yes, dramatic family dynamics count as a genre.",
-
       "She said she wouldn't worldbuild this one. She lied.",
-
       "Please don't ask how many princes live here.",
-
       "Rambling is encouraged. Unfortunately.",
-
       "Throw the trope in. We'll see what happens.",
-
       "A suspicious amount of royalty may occur.",
-
       "No idea is too strange. This is probably a mistake.",
-
       "You bring the idea. She'll bring seventeen relatives.",
-
       "The cauldron accepts fluff, angst and questionable decisions."
     ];
 
@@ -1211,12 +1210,6 @@
     document.getElementById("ari-message").innerHTML =
       '<span class="ari-name">Ari:</span> ' + ariMessage;
 
-
-    /* --------------------------------
-       FAKE SUBMISSION FOR DESIGN TEST
-       We will replace this later with
-       the real form service.
-    -------------------------------- */
 
     const requestForm =
       document.getElementById("request-form");
@@ -1236,17 +1229,11 @@
 
     const verdicts = [
       "Ari approves. Probably.",
-
       "Ari has inspected the offering.",
-
       "The familiar has accepted your tribute.",
-
       "Ari refuses to elaborate, but seems intrigued.",
-
       "The cauldron bubbled. That's probably good.",
-
       "Ari has filed this under: Potential Chaos.",
-
       "Your idea has passed the extremely rigorous cat inspection."
     ];
 
@@ -1258,9 +1245,7 @@
         event.preventDefault();
 
         submitButton.disabled = true;
-
         submitButton.classList.add("brewing");
-
         submitButton.textContent =
           "Brewing... 🔮";
 
@@ -1283,9 +1268,7 @@
             });
 
             submitButton.disabled = false;
-
             submitButton.classList.remove("brewing");
-
             submitButton.textContent =
               "✦ Send to the Witchery ✦";
 
@@ -1304,7 +1287,6 @@
         requestForm.reset();
 
         successCard.classList.remove("show");
-
         requestForm.style.display = "block";
 
         requestForm.scrollIntoView({
