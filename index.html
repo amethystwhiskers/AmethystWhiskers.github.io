@@ -169,8 +169,7 @@
     }
 
     @keyframes ariFloat {
-      0%,
-      100% {
+      0%, 100% {
         transform: translateY(0);
       }
 
@@ -571,8 +570,7 @@
     }
 
     @keyframes sparkleFloat {
-      0%,
-      100% {
+      0%, 100% {
         opacity: 0.25;
         transform: translateY(0);
       }
@@ -702,6 +700,8 @@
     <form
       id="request-form"
       class="card form-section"
+      action="https://formspree.io/f/mzebyqrr"
+      method="POST"
     >
 
       <h2 class="section-heading">
@@ -766,56 +766,32 @@
         <div class="choice-grid">
 
           <label class="choice">
-            <input
-              type="checkbox"
-              name="bot-type"
-              value="Single Character"
-            >
+            <input type="checkbox" name="bot-type" value="Single Character">
             <span>♡ Single Character</span>
           </label>
 
           <label class="choice">
-            <input
-              type="checkbox"
-              name="bot-type"
-              value="Multi Character"
-            >
+            <input type="checkbox" name="bot-type" value="Multi Character">
             <span>♛ Multi Character</span>
           </label>
 
           <label class="choice">
-            <input
-              type="checkbox"
-              name="bot-type"
-              value="Family"
-            >
+            <input type="checkbox" name="bot-type" value="Family">
             <span>✦ Family</span>
           </label>
 
           <label class="choice">
-            <input
-              type="checkbox"
-              name="bot-type"
-              value="Royal or Noble"
-            >
+            <input type="checkbox" name="bot-type" value="Royal or Noble">
             <span>♕ Royal / Noble</span>
           </label>
 
           <label class="choice">
-            <input
-              type="checkbox"
-              name="bot-type"
-              value="Sandbox World"
-            >
+            <input type="checkbox" name="bot-type" value="Sandbox World">
             <span>☾ Sandbox World</span>
           </label>
 
           <label class="choice">
-            <input
-              type="checkbox"
-              name="bot-type"
-              value="Surprise Me"
-            >
+            <input type="checkbox" name="bot-type" value="Surprise Me">
             <span>🔮 Surprise Me</span>
           </label>
 
@@ -849,29 +825,17 @@
         <div class="choice-grid">
 
           <label class="choice">
-            <input
-              type="radio"
-              name="relationship-stage"
-              value="Non-established"
-            >
+            <input type="radio" name="relationship-stage" value="Non-established">
             <span>✦ Non-established</span>
           </label>
 
           <label class="choice">
-            <input
-              type="radio"
-              name="relationship-stage"
-              value="Semi-established"
-            >
+            <input type="radio" name="relationship-stage" value="Semi-established">
             <span>☾ Semi-established</span>
           </label>
 
           <label class="choice">
-            <input
-              type="radio"
-              name="relationship-stage"
-              value="Established"
-            >
+            <input type="radio" name="relationship-stage" value="Established">
             <span>♡ Established</span>
           </label>
 
@@ -907,29 +871,17 @@
         <div class="choice-grid">
 
           <label class="choice">
-            <input
-              type="radio"
-              name="idea-specificity"
-              value="Loose idea"
-            >
+            <input type="radio" name="idea-specificity" value="Loose idea">
             <span>✧ Loose idea</span>
           </label>
 
           <label class="choice">
-            <input
-              type="radio"
-              name="idea-specificity"
-              value="Some specifics"
-            >
+            <input type="radio" name="idea-specificity" value="Some specifics">
             <span>☾ Some specifics</span>
           </label>
 
           <label class="choice">
-            <input
-              type="radio"
-              name="idea-specificity"
-              value="Very specific"
-            >
+            <input type="radio" name="idea-specificity" value="Very specific">
             <span>✦ Very specific</span>
           </label>
 
@@ -959,43 +911,15 @@
           id="tone"
           name="tone"
         >
-
-          <option value="">
-            Choose a vibe...
-          </option>
-
-          <option>
-            Soft / wholesome
-          </option>
-
-          <option>
-            Fantasy adventure
-          </option>
-
-          <option>
-            Political / dramatic
-          </option>
-
-          <option>
-            Dark fantasy
-          </option>
-
-          <option>
-            Romantic
-          </option>
-
-          <option>
-            Chaotic / funny
-          </option>
-
-          <option>
-            Angst
-          </option>
-
-          <option>
-            A mixture
-          </option>
-
+          <option value="">Choose a vibe...</option>
+          <option>Soft / wholesome</option>
+          <option>Fantasy adventure</option>
+          <option>Political / dramatic</option>
+          <option>Dark fantasy</option>
+          <option>Romantic</option>
+          <option>Chaotic / funny</option>
+          <option>Angst</option>
+          <option>A mixture</option>
         </select>
 
       </div>
@@ -1009,29 +933,17 @@
         <div class="choice-grid">
 
           <label class="choice">
-            <input
-              type="radio"
-              name="romance"
-              value="Yes"
-            >
+            <input type="radio" name="romance" value="Yes">
             <span>♡ Yes please</span>
           </label>
 
           <label class="choice">
-            <input
-              type="radio"
-              name="romance"
-              value="Optional"
-            >
+            <input type="radio" name="romance" value="Optional">
             <span>☾ Optional</span>
           </label>
 
           <label class="choice">
-            <input
-              type="radio"
-              name="romance"
-              value="No"
-            >
+            <input type="radio" name="romance" value="No">
             <span>✦ No romance</span>
           </label>
 
@@ -1115,6 +1027,7 @@
             name="creative-freedom"
             value="Yes"
           >
+
           <span>
             🔮 I’m happy for you to change names, details or lore
             to better fit your style.
@@ -1194,7 +1107,7 @@
       "Yes, dramatic family dynamics count as a genre.",
       "She said she wouldn't worldbuild this one. She lied.",
       "Please don't ask how many princes live here.",
-      "Rambling is encouraged!", 
+      "Rambling is encouraged!",
       "Throw the trope in. We'll see what happens.",
       "A suspicious amount of royalty may occur.",
       "No idea is too strange. The cauldron likes strange.",
@@ -1240,7 +1153,7 @@
 
     requestForm.addEventListener(
       "submit",
-      function(event) {
+      async function(event) {
 
         event.preventDefault();
 
@@ -1249,32 +1162,77 @@
         submitButton.textContent =
           "Brewing... 🔮";
 
+        const formData =
+          new FormData(requestForm);
 
-        setTimeout(
-          function() {
+        try {
 
-            requestForm.style.display = "none";
+          const response =
+            await fetch(
+              requestForm.action,
+              {
+                method: "POST",
+                body: formData,
+                headers: {
+                  "Accept": "application/json"
+                }
+              }
+            );
 
-            successCard.classList.add("show");
 
-            ariVerdict.textContent =
-              verdicts[
-                Math.floor(Math.random() * verdicts.length)
-              ];
+          if (!response.ok) {
+            throw new Error(
+              "Submission failed with status " +
+              response.status
+            );
+          }
 
-            successCard.scrollIntoView({
-              behavior: "smooth",
-              block: "center"
-            });
 
-            submitButton.disabled = false;
-            submitButton.classList.remove("brewing");
-            submitButton.textContent =
-              "✦ Send to the Witchery ✦";
+          requestForm.style.display =
+            "none";
 
-          },
-          1200
-        );
+          successCard.classList.add(
+            "show"
+          );
+
+          ariVerdict.textContent =
+            verdicts[
+              Math.floor(
+                Math.random() *
+                verdicts.length
+              )
+            ];
+
+          successCard.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+
+        }
+
+        catch (error) {
+
+          console.error(error);
+
+          alert(
+            "Ari says: The cauldron coughed. Your request didn't send — please try again in a moment. 🐈🔮"
+          );
+
+        }
+
+        finally {
+
+          submitButton.disabled =
+            false;
+
+          submitButton.classList.remove(
+            "brewing"
+          );
+
+          submitButton.textContent =
+            "✦ Send to the Witchery ✦";
+
+        }
 
       }
     );
@@ -1286,8 +1244,12 @@
 
         requestForm.reset();
 
-        successCard.classList.remove("show");
-        requestForm.style.display = "block";
+        successCard.classList.remove(
+          "show"
+        );
+
+        requestForm.style.display =
+          "block";
 
         requestForm.scrollIntoView({
           behavior: "smooth",
