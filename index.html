@@ -28,14 +28,24 @@
     body {
       margin: 0;
       min-height: 100vh;
-      padding: 28px 16px 48px;
+      padding: 28px 16px 55px;
 
       background:
-        radial-gradient(circle at top, rgba(112, 65, 143, 0.20), transparent 38%),
-        linear-gradient(180deg, #201627 0%, var(--bg-deep) 45%, #120e16 100%);
+        radial-gradient(
+          circle at top,
+          rgba(112, 65, 143, 0.22),
+          transparent 38%
+        ),
+        linear-gradient(
+          180deg,
+          #201627 0%,
+          var(--bg-deep) 45%,
+          #120e16 100%
+        );
+
+      background-attachment: fixed;
 
       color: var(--cream);
-
       font-family: Georgia, "Times New Roman", serif;
     }
 
@@ -43,6 +53,10 @@
       width: min(100%, 720px);
       margin: 0 auto;
     }
+
+    /* --------------------------------
+       HERO
+    -------------------------------- */
 
     .hero {
       text-align: center;
@@ -82,7 +96,7 @@
     }
 
     .divider {
-      margin: 22px auto;
+      margin: 24px auto;
       text-align: center;
 
       color: var(--gold);
@@ -93,8 +107,14 @@
         0 0 7px rgba(179, 138, 88, 0.35);
     }
 
+    /* --------------------------------
+       CARDS
+    -------------------------------- */
+
     .card {
-      margin-top: 20px;
+      position: relative;
+
+      margin-top: 22px;
       padding: 24px 20px;
 
       background:
@@ -104,7 +124,7 @@
           rgba(23, 18, 29, 0.97)
         );
 
-      border: 1px solid rgba(179, 138, 88, 0.55);
+      border: 1px solid rgba(179, 138, 88, 0.60);
       border-radius: 18px;
 
       box-shadow:
@@ -131,31 +151,145 @@
     }
 
     .note {
-      margin-top: 14px;
-      padding: 14px 16px;
+      margin-top: 16px;
+      padding: 15px 16px;
 
       background: rgba(112, 65, 143, 0.14);
       border-left: 2px solid var(--gold);
 
       color: var(--cream);
       font-size: 0.9rem;
-      line-height: 1.6;
+      line-height: 1.65;
     }
+
+    /* --------------------------------
+       ARI
+    -------------------------------- */
+
+    .ari-zone {
+      position: relative;
+      margin-top: 75px;
+    }
+
+    .ari {
+      position: absolute;
+
+      width: 108px;
+      height: auto;
+
+      right: 18px;
+      top: -86px;
+
+      z-index: 5;
+
+      pointer-events: none;
+
+      filter:
+        drop-shadow(0 5px 5px rgba(0, 0, 0, 0.30))
+        drop-shadow(0 0 9px rgba(183, 138, 203, 0.20));
+
+      animation: ariFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes ariFloat {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-4px);
+      }
+    }
+
+    .ari-bubble {
+      position: absolute;
+
+      top: -62px;
+      left: 16px;
+
+      width: calc(100% - 145px);
+      min-height: 54px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 10px 13px;
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(43, 25, 53, 0.98),
+          rgba(23, 18, 29, 0.98)
+        );
+
+      border: 1px solid rgba(183, 138, 203, 0.50);
+      border-radius: 13px;
+
+      color: var(--lilac);
+
+      font-size: 0.78rem;
+      font-style: italic;
+      line-height: 1.45;
+      text-align: center;
+
+      box-shadow:
+        0 0 14px rgba(112, 65, 143, 0.20);
+    }
+
+    .ari-bubble::after {
+      content: "";
+
+      position: absolute;
+
+      right: -9px;
+      bottom: 12px;
+
+      width: 16px;
+      height: 16px;
+
+      background: #201627;
+
+      border-top: 1px solid rgba(183, 138, 203, 0.50);
+      border-right: 1px solid rgba(183, 138, 203, 0.50);
+
+      transform: rotate(45deg);
+    }
+
+    .ari-name {
+      color: var(--gold);
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* --------------------------------
+       FORM
+    -------------------------------- */
 
     .form-section {
       margin-top: 22px;
     }
 
     .section-heading {
-      margin: 0 0 14px;
+      margin: 0 0 15px;
 
       color: var(--cream);
-      font-size: 1.12rem;
+      font-size: 1.15rem;
       letter-spacing: 0.06em;
     }
 
+    .section-intro {
+      margin: -6px 0 16px;
+
+      color: var(--lilac);
+      font-size: 0.82rem;
+      font-style: italic;
+      line-height: 1.55;
+    }
+
     .field {
-      margin-top: 16px;
+      margin-top: 18px;
     }
 
     label {
@@ -168,9 +302,16 @@
       letter-spacing: 0.03em;
     }
 
+    .optional {
+      color: var(--lilac);
+      font-size: 0.72rem;
+      font-weight: 400;
+      font-style: italic;
+    }
+
     .hint {
       display: block;
-      margin-top: 5px;
+      margin-top: 7px;
 
       color: var(--rose);
       font-size: 0.78rem;
@@ -218,19 +359,93 @@
     }
 
     textarea {
-      min-height: 140px;
+      min-height: 135px;
       resize: vertical;
       line-height: 1.55;
     }
 
+    /* --------------------------------
+       PRETTY CHOICE BUTTONS
+    -------------------------------- */
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 9px;
+
+      margin-top: 8px;
+    }
+
+    .choice input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .choice span {
+      display: block;
+      height: 100%;
+
+      padding: 11px 8px;
+
+      background: rgba(23, 18, 29, 0.72);
+
+      border: 1px solid rgba(183, 138, 203, 0.36);
+      border-radius: 8px;
+
+      color: var(--lilac);
+
+      font-size: 0.79rem;
+      font-weight: 400;
+      line-height: 1.35;
+      text-align: center;
+
+      cursor: pointer;
+
+      transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .choice span:hover {
+      border-color: rgba(183, 138, 203, 0.65);
+      color: var(--cream);
+    }
+
+    .choice input:checked + span {
+      color: var(--cream);
+
+      background:
+        linear-gradient(
+          180deg,
+          rgba(112, 65, 143, 0.55),
+          rgba(43, 25, 53, 0.82)
+        );
+
+      border-color: rgba(179, 138, 88, 0.72);
+
+      box-shadow:
+        0 0 13px rgba(112, 65, 143, 0.22),
+        inset 0 0 12px rgba(183, 138, 203, 0.05);
+
+      transform: translateY(-1px);
+    }
+
+    /* --------------------------------
+       BUTTON
+    -------------------------------- */
+
     .button-wrap {
-      margin-top: 26px;
+      margin-top: 28px;
       text-align: center;
     }
 
     button {
       width: 100%;
-      padding: 15px 18px;
+      padding: 16px 18px;
 
       background:
         linear-gradient(
@@ -239,7 +454,7 @@
           rgba(43, 25, 53, 0.96)
         );
 
-      border: 1px solid rgba(179, 138, 88, 0.75);
+      border: 1px solid rgba(179, 138, 88, 0.80);
       border-radius: 10px;
 
       color: var(--cream);
@@ -268,14 +483,202 @@
         0 0 22px rgba(183, 138, 203, 0.28);
     }
 
+    button:disabled {
+      cursor: wait;
+      opacity: 0.85;
+    }
+
+    .brewing {
+      animation: brewPulse 0.9s ease-in-out infinite alternate;
+    }
+
+    @keyframes brewPulse {
+      from {
+        box-shadow:
+          0 0 10px rgba(112, 65, 143, 0.28);
+      }
+
+      to {
+        box-shadow:
+          0 0 28px rgba(183, 138, 203, 0.55),
+          0 0 40px rgba(112, 65, 143, 0.20);
+      }
+    }
+
+    /* --------------------------------
+       SUCCESS SCREEN
+    -------------------------------- */
+
+    #success-card {
+      display: none;
+
+      text-align: center;
+      overflow: hidden;
+
+      padding-top: 28px;
+      padding-bottom: 28px;
+    }
+
+    #success-card.show {
+      display: block;
+      animation: successAppear 0.5s ease;
+    }
+
+    @keyframes successAppear {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .success-symbol {
+      font-size: 2rem;
+
+      filter:
+        drop-shadow(0 0 10px rgba(183, 138, 203, 0.40));
+    }
+
+    .success-title {
+      margin: 10px 0 8px;
+
+      color: var(--cream);
+
+      font-family: cursive;
+      font-size: clamp(1.8rem, 7vw, 2.7rem);
+
+      text-shadow:
+        0 0 9px rgba(183, 138, 203, 0.38);
+    }
+
+    .success-copy {
+      max-width: 520px;
+      margin: 0 auto;
+
+      color: var(--lilac);
+      line-height: 1.7;
+    }
+
+    .success-ari {
+      display: block;
+
+      width: 125px;
+      height: auto;
+
+      margin: 20px auto 3px;
+
+      filter:
+        drop-shadow(0 4px 5px rgba(0, 0, 0, 0.30))
+        drop-shadow(0 0 10px rgba(183, 138, 203, 0.20));
+
+      animation: ariFloat 4s ease-in-out infinite;
+    }
+
+    .ari-verdict {
+      margin: 7px auto 20px;
+
+      color: var(--gold);
+      font-size: 0.83rem;
+      font-style: italic;
+    }
+
+    /* --------------------------------
+       FOOTER
+    -------------------------------- */
+
     .footer {
-      margin-top: 26px;
+      margin-top: 28px;
       text-align: center;
 
       color: var(--gold);
       font-size: 0.8rem;
       font-style: italic;
       line-height: 1.6;
+    }
+
+    /* --------------------------------
+       LITTLE BACKGROUND SPARKLES
+    -------------------------------- */
+
+    .sparkle {
+      position: fixed;
+
+      color: rgba(183, 138, 203, 0.23);
+
+      pointer-events: none;
+      user-select: none;
+
+      z-index: -1;
+
+      animation: sparkleFloat 7s ease-in-out infinite;
+    }
+
+    .sparkle.one {
+      top: 14%;
+      left: 5%;
+      font-size: 1rem;
+    }
+
+    .sparkle.two {
+      top: 44%;
+      right: 6%;
+      font-size: 0.75rem;
+      animation-delay: 2s;
+    }
+
+    .sparkle.three {
+      top: 72%;
+      left: 7%;
+      font-size: 0.85rem;
+      animation-delay: 4s;
+    }
+
+    @keyframes sparkleFloat {
+      0%,
+      100% {
+        opacity: 0.25;
+        transform: translateY(0);
+      }
+
+      50% {
+        opacity: 0.65;
+        transform: translateY(-8px);
+      }
+    }
+
+    /* --------------------------------
+       MOBILE
+    -------------------------------- */
+
+    @media (max-width: 480px) {
+      .ari-zone {
+        margin-top: 82px;
+      }
+
+      .ari {
+        width: 94px;
+        right: 11px;
+        top: -75px;
+      }
+
+      .ari-bubble {
+        left: 8px;
+        top: -64px;
+
+        width: calc(100% - 116px);
+
+        padding: 9px 10px;
+
+        font-size: 0.72rem;
+      }
+
+      .choice-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (min-width: 700px) {
@@ -286,17 +689,42 @@
       .card {
         padding: 30px 28px;
       }
+
+      .ari {
+        width: 120px;
+        right: 25px;
+        top: -94px;
+      }
+
+      .ari-bubble {
+        top: -70px;
+        width: calc(100% - 170px);
+      }
+
+      .choice-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
   </style>
 </head>
 
 <body>
+
+  <span class="sparkle one">✦</span>
+  <span class="sparkle two">☾</span>
+  <span class="sparkle three">✧</span>
+
   <main class="page">
 
     <section class="hero">
-      <div class="eyebrow">Bot Requests</div>
 
-      <h1>☾ ✦ Whiskers & Witchery ✦ ☽</h1>
+      <div class="eyebrow">
+        Bot Requests
+      </div>
+
+      <h1>
+        ☾ ✦ Whiskers & Witchery ✦ ☽
+      </h1>
 
       <p class="subtitle">
         A little place to toss strange worlds, favourite tropes,
@@ -306,114 +734,588 @@
       <div class="divider">
         ✦ ─────── ☾ ◆ ☽ ─────── ✦
       </div>
+
     </section>
 
-    <section class="card">
-      <h2 class="card-title">🔮 Whisper a Request</h2>
 
-      <p class="card-copy">
-        Got a bot idea you think would suit my style?
-        Send it my way and I might end up far too attached to it.
-      </p>
+    <!-- ARI + INTRO -->
 
-      <div class="note">
-        Requests are suggestions, not guaranteed uploads.
-        I make the ideas that spark something in my brain,
-        fit my style, or send me spiralling into accidental worldbuilding.
+    <section class="ari-zone">
+
+      <div class="ari-bubble">
+        <span id="ari-message">
+          <span class="ari-name">Ari:</span>
+          Please feed the cauldron responsibly.
+        </span>
       </div>
+
+      <img
+        class="ari"
+        src="https://files.catbox.moe/7b2t06.png"
+        alt="Ari, the Whiskers & Witchery familiar"
+      >
+
+      <div class="card">
+
+        <h2 class="card-title">
+          🔮 Whisper a Request
+        </h2>
+
+        <p class="card-copy">
+          Got a bot idea you think would suit my style?
+          Send it my way and I might end up far too attached to it.
+        </p>
+
+        <div class="note">
+          Requests are suggestions, not guaranteed uploads.
+          I make the ideas that spark something in my brain,
+          fit my style, or send me spiralling into accidental worldbuilding.
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="card form-section">
-      <h2 class="section-heading">✦ About You</h2>
+
+    <!-- FORM -->
+
+    <form
+      id="request-form"
+      class="card form-section"
+    >
+
+      <!-- ABOUT -->
+
+      <h2 class="section-heading">
+        ✦ About You
+      </h2>
 
       <div class="field">
-        <label for="username">Janitor Username</label>
+
+        <label for="username">
+          Janitor Username
+          <span class="optional">— optional</span>
+        </label>
+
         <input
           id="username"
+          name="username"
           type="text"
           placeholder="@yourname"
         >
+
       </div>
+
 
       <div class="divider">
         ✦ ───── ◇ ───── ✦
       </div>
 
-      <h2 class="section-heading">☾ The Idea</h2>
+
+      <!-- IDEA -->
+
+      <h2 class="section-heading">
+        ☾ The Idea
+      </h2>
+
+      <p class="section-intro">
+        Give me the seed. I am perfectly capable of growing
+        an unnecessary family tree from it.
+      </p>
 
       <div class="field">
-        <label for="concept">What are you imagining?</label>
+
+        <label for="concept">
+          What are you imagining?
+        </label>
 
         <textarea
           id="concept"
+          name="concept"
+          required
           placeholder="Tell me the concept, character, world, trope, chaos..."
         ></textarea>
 
         <span class="hint">
           No need to make it fancy. Rambling is welcome.
         </span>
+
       </div>
 
+
       <div class="field">
-        <label for="role">What role should {{user}} have?</label>
+
+        <label>
+          What kind of bot?
+          <span class="optional">— pick any that fit</span>
+        </label>
+
+        <div class="choice-grid">
+
+          <label class="choice">
+            <input
+              type="checkbox"
+              name="bot-type"
+              value="Single Character"
+            >
+            <span>♡ Single Character</span>
+          </label>
+
+          <label class="choice">
+            <input
+              type="checkbox"
+              name="bot-type"
+              value="Multi Character"
+            >
+            <span>♛ Multi Character</span>
+          </label>
+
+          <label class="choice">
+            <input
+              type="checkbox"
+              name="bot-type"
+              value="Family"
+            >
+            <span>✦ Family</span>
+          </label>
+
+          <label class="choice">
+            <input
+              type="checkbox"
+              name="bot-type"
+              value="Royal or Noble"
+            >
+            <span>♕ Royal / Noble</span>
+          </label>
+
+          <label class="choice">
+            <input
+              type="checkbox"
+              name="bot-type"
+              value="Sandbox World"
+            >
+            <span>☾ Sandbox World</span>
+          </label>
+
+          <label class="choice">
+            <input
+              type="checkbox"
+              name="bot-type"
+              value="Surprise Me"
+            >
+            <span>🔮 Surprise Me</span>
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <label for="role">
+          What role should {{user}} have?
+          <span class="optional">— optional</span>
+        </label>
 
         <input
           id="role"
+          name="user-role"
           type="text"
           placeholder="Royal sibling, outsider, knight, chosen one, menace..."
         >
+
       </div>
+
 
       <div class="divider">
         ✦ ───── ◇ ───── ✦
       </div>
 
-      <h2 class="section-heading">♡ The Vibe</h2>
+
+      <!-- VIBE -->
+
+      <h2 class="section-heading">
+        ♡ The Vibe
+      </h2>
 
       <div class="field">
-        <label for="tone">Overall tone</label>
 
-        <select id="tone">
-          <option>Choose a vibe...</option>
-          <option>Soft / wholesome</option>
-          <option>Fantasy adventure</option>
-          <option>Political / dramatic</option>
-          <option>Dark fantasy</option>
-          <option>Romantic</option>
-          <option>Chaotic / funny</option>
-          <option>A mixture</option>
+        <label for="tone">
+          Overall tone
+        </label>
+
+        <select
+          id="tone"
+          name="tone"
+        >
+
+          <option value="">
+            Choose a vibe...
+          </option>
+
+          <option>
+            Soft / wholesome
+          </option>
+
+          <option>
+            Fantasy adventure
+          </option>
+
+          <option>
+            Political / dramatic
+          </option>
+
+          <option>
+            Dark fantasy
+          </option>
+
+          <option>
+            Romantic
+          </option>
+
+          <option>
+            Chaotic / funny
+          </option>
+
+          <option>
+            Angst
+          </option>
+
+          <option>
+            A mixture
+          </option>
+
         </select>
+
       </div>
 
+
       <div class="field">
-        <label for="musthave">Must-haves</label>
+
+        <label>
+          Romance?
+        </label>
+
+        <div class="choice-grid">
+
+          <label class="choice">
+            <input
+              type="radio"
+              name="romance"
+              value="Yes"
+            >
+            <span>♡ Yes please</span>
+          </label>
+
+          <label class="choice">
+            <input
+              type="radio"
+              name="romance"
+              value="Optional"
+            >
+            <span>☾ Optional</span>
+          </label>
+
+          <label class="choice">
+            <input
+              type="radio"
+              name="romance"
+              value="No"
+            >
+            <span>✦ No romance</span>
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <div class="field">
+
+        <label for="tropes">
+          Tropes / dynamics
+          <span class="optional">— optional</span>
+        </label>
+
+        <textarea
+          id="tropes"
+          name="tropes"
+          placeholder="Favourite child, enemies to lovers, found family, court intrigue, protective sibling..."
+        ></textarea>
+
+      </div>
+
+
+      <div class="divider">
+        ✦ ───── ◇ ───── ✦
+      </div>
+
+
+      <!-- NON NEGOTIABLES -->
+
+      <h2 class="section-heading">
+        ✧ Ingredients
+      </h2>
+
+      <div class="field">
+
+        <label for="musthave">
+          Must-haves
+          <span class="optional">— optional</span>
+        </label>
 
         <textarea
           id="musthave"
+          name="must-haves"
           placeholder="Anything you really want included?"
         ></textarea>
+
       </div>
 
+
       <div class="field">
-        <label for="nope">Hard no's</label>
+
+        <label for="nope">
+          Hard no's
+          <span class="optional">— optional</span>
+        </label>
 
         <textarea
           id="nope"
+          name="hard-nos"
           placeholder="Anything you definitely do not want?"
         ></textarea>
+
       </div>
 
+
+      <div class="field">
+
+        <label for="extra">
+          Final whisper
+          <span class="optional">— very optional</span>
+        </label>
+
+        <textarea
+          id="extra"
+          name="extra"
+          placeholder="Anything else? Lore dump. Character thoughts. Unhinged vision. Go wild."
+        ></textarea>
+
+      </div>
+
+
       <div class="button-wrap">
-        <button type="button">
+
+        <button
+          id="submit-button"
+          type="submit"
+        >
           ✦ Send to the Witchery ✦
         </button>
+
       </div>
+
+    </form>
+
+
+    <!-- SUCCESS SCREEN -->
+
+    <section
+      id="success-card"
+      class="card"
+    >
+
+      <div class="success-symbol">
+        ✦ 🔮 ✦
+      </div>
+
+      <h2 class="success-title">
+        Into the Cauldron It Goes
+      </h2>
+
+      <p class="success-copy">
+        Your request has been whispered into the Witchery.
+        Whether it becomes a bot, a kingdom, or a deeply unnecessary
+        amount of family lore is now between the cauldron and fate.
+      </p>
+
+      <div class="divider">
+        ✦ ─────── ☾ ◆ ☽ ─────── ✦
+      </div>
+
+      <img
+        class="success-ari"
+        src="https://files.catbox.moe/7b2t06.png"
+        alt="Ari"
+      >
+
+      <div
+        id="ari-verdict"
+        class="ari-verdict"
+      >
+        Ari approves. Probably.
+      </div>
+
+      <button
+        id="another-button"
+        type="button"
+      >
+        ☾ Whisper Another Request ☽
+      </button>
+
     </section>
+
 
     <div class="footer">
       ☾ Made with too much lore and not enough restraint ☽
     </div>
 
   </main>
+
+
+  <script>
+
+    /* --------------------------------
+       RANDOM ARI GREETINGS
+    -------------------------------- */
+
+    const ariMessages = [
+      "Please feed the cauldron responsibly.",
+
+      "Yes, dramatic family dynamics count as a genre.",
+
+      "She said she wouldn't worldbuild this one. She lied.",
+
+      "Please don't ask how many princes live here.",
+
+      "Rambling is encouraged. Unfortunately.",
+
+      "Throw the trope in. We'll see what happens.",
+
+      "A suspicious amount of royalty may occur.",
+
+      "No idea is too strange. This is probably a mistake.",
+
+      "You bring the idea. She'll bring seventeen relatives.",
+
+      "The cauldron accepts fluff, angst and questionable decisions."
+    ];
+
+    const ariMessage =
+      ariMessages[
+        Math.floor(Math.random() * ariMessages.length)
+      ];
+
+    document.getElementById("ari-message").innerHTML =
+      '<span class="ari-name">Ari:</span> ' + ariMessage;
+
+
+    /* --------------------------------
+       FAKE SUBMISSION FOR DESIGN TEST
+       We will replace this later with
+       the real form service.
+    -------------------------------- */
+
+    const requestForm =
+      document.getElementById("request-form");
+
+    const submitButton =
+      document.getElementById("submit-button");
+
+    const successCard =
+      document.getElementById("success-card");
+
+    const anotherButton =
+      document.getElementById("another-button");
+
+    const ariVerdict =
+      document.getElementById("ari-verdict");
+
+
+    const verdicts = [
+      "Ari approves. Probably.",
+
+      "Ari has inspected the offering.",
+
+      "The familiar has accepted your tribute.",
+
+      "Ari refuses to elaborate, but seems intrigued.",
+
+      "The cauldron bubbled. That's probably good.",
+
+      "Ari has filed this under: Potential Chaos.",
+
+      "Your idea has passed the extremely rigorous cat inspection."
+    ];
+
+
+    requestForm.addEventListener(
+      "submit",
+      function(event) {
+
+        event.preventDefault();
+
+        submitButton.disabled = true;
+
+        submitButton.classList.add("brewing");
+
+        submitButton.textContent =
+          "Brewing... 🔮";
+
+
+        setTimeout(
+          function() {
+
+            requestForm.style.display = "none";
+
+            successCard.classList.add("show");
+
+            ariVerdict.textContent =
+              verdicts[
+                Math.floor(Math.random() * verdicts.length)
+              ];
+
+            successCard.scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+
+            submitButton.disabled = false;
+
+            submitButton.classList.remove("brewing");
+
+            submitButton.textContent =
+              "✦ Send to the Witchery ✦";
+
+          },
+          1200
+        );
+
+      }
+    );
+
+
+    anotherButton.addEventListener(
+      "click",
+      function() {
+
+        requestForm.reset();
+
+        successCard.classList.remove("show");
+
+        requestForm.style.display = "block";
+
+        requestForm.scrollIntoView({
+          behavior: "smooth",
+          block: "start"
+        });
+
+      }
+    );
+
+  </script>
+
 </body>
 </html>
